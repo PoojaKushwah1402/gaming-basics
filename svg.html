@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<!-- An SVG image begins with an <svg> element
+    The width and height attributes of the <svg> element define the width and height of the SVG image
+    The <circle> element is used to draw a circle
+    The cx and cy attributes define the x and y coordinates of the center of the circle. If cx and cy are not set, the circle's center is set to (0, 0)
+    The r attribute defines the radius of the circle
+    The stroke and stroke-width attributes control how the outline of a shape appears. We set the outline of the circle to a 4px green "border"
+    The fill attribute refers to the color inside the circle. We set the fill color to yellow
+    The closing </svg> tag closes the SVG image 
+
+    SVG has some predefined shape elements that can be used by developers:
+    Rectangle <rect>
+    Circle <circle>
+    Ellipse <ellipse>
+    Line <line>
+    Polyline <polyline>
+    Polygon <polygon>
+    Path <path>-->
+
+  <h1>My first SVG</h1>
+
+  <svg width="100" height="100" style="background-color: aqua;" >
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+  </svg>
+
+  <svg width="400" height="180" style="background-color: rgb(228, 240, 240);">
+    <rect x="50" y="20" width="150" height="150"
+    style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
+  </svg>
+  <svg width="400" height="180" style="background-color: rgb(228, 240, 240);">
+    <rect x="50" y="20" width="150" height="150"
+    style="fill:blue;stroke:pink;stroke-width:5;opacity:0.5" />
+  </svg>
+
+  <svg width="400" height="180">
+    <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+    style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+  </svg>
+  <!-- The rx and the ry attributes rounds the corners of the rectangle -->
+
+
+
+</body>
+</html>
