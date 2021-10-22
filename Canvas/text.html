@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid green;"></canvas>
+            <canvas id="myCanvas1" width="200" height="100" style="border:1px solid green;"></canvas>
+            <canvas id="myCanvas2" width="200" height="100" style="border:1px solid green;"></canvas>
+        </body>
+
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.fillText("Hello World", 20, 50);
+
+            var canvas = document.getElementById("myCanvas1");
+            var ctx = canvas.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.strokeText("Hello World", 10, 50);
+
+            var canvas = document.getElementById("myCanvas2");
+            var ctx = canvas.getContext("2d");
+            ctx.font = "30px Comic Sans MS";
+            ctx.fillStyle = "red";
+            ctx.textAlign = "center";
+            ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
+         </script>
+    </html>
+
+
+    <!-- Drawing Text on the Canvas
+    To draw text on a canvas, the most important property and methods are:
+        font - defines the font properties for the text
+        fillText(text,x,y) - draws "filled" text on the canvas
+        strokeText(text,x,y) - draws text on the canvas (no fill) -->
