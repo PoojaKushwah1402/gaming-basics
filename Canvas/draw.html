@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html>
+        <!-- Draw on the Canvas With JavaScript
+        All drawing on the HTML canvas must be done with JavaScript: -->
+        <body>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid green;"></canvas>
+        </body>
+
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0, 0, 160, 70);
+
+            // var canvas = document.getElementById("myCanvas");
+            // var ctx = canvas.getContext("2d");
+             ctx.moveTo(0, 0);
+            ctx.lineTo(190, 90);
+            ctx.stroke();
+
+            //Circle
+        //     beginPath() - begins a path
+        //     arc(x,y,r,startangle,endangle) - creates an arc/curve. To create a circle with arc(): Set start angle 
+        //     to 0 and end angle to 2*Math.PI. The x and y parameters define the x- and y-coordinates of the center of 
+        //     the circle. The r parameter defines the radius of the circle.
+
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+
+         </script>
+    </html>
+
+
+<!--
+    Steps to draw : 
+    Step 1: Find the Canvas Element
+        var canvas = document.getElementById("myCanvas");
+
+    Step 2: Create a Drawing Object
+        The getContext() is a built-in HTML object, with properties and methods for drawing:
+        var ctx = canvas.getContext("2d");
+
+    Step 3: Draw on the Canvas
+        Finally, you can draw on the canvas.
+        Set the fill style of the drawing object to the color red:
+        ctx.fillStyle = "#FF0000";
+        The fillStyle property can be a CSS color, a gradient, or a pattern. The default fillStyle is black.
+
+    Step 4: The fillRect(x,y,width,height) method draws a rectangle, filled with the fill style, on the canvas:
+        ctx.fillRect(0, 0, 150, 75);
+-->
