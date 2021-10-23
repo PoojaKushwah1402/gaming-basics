@@ -13,58 +13,6 @@
         style="background-color:#333">
     </canvas>
 
-    <script>
-
-        const makeCenter = (radius, ctx, color) => drawFullCircle(radius, ctx, color);
-
-        const makebackgrounGradient = (radius, canvas) => {
-          let grad = canvas.createRadialGradient(0,0,radius*0.95,0,0,radius*1.05);
-          grad.addColorStop(0,'#333');
-          grad.addColorStop(0.5,'white');
-          grad.addColorStop(1,'#333');
-          canvas.strokeStyle = grad;
-          canvas.lineWidth = radius*0.1
-          canvas.stroke();
-          
-        }
-
-        const drawFullCircle = (radius, canvas, color) => {
-          canvas.beginPath();//The beginPath() method begins a path, or resets the current path.
-          canvas.arc(0,0,radius,0,2*Math.PI);
-          canvas.fillStyle = color;
-          canvas.fill();
-        }
-
-        const setNumbers = (radius, canvas) => {
-          var ang;
-          var num;
-          canvas.font = radius * 0.15 + "px arial";
-          canvas.textBaseline = "middle";
-          canvas.textAlign = "center";
-            for(num = 1; num < 13; num++){
-              ang = num * Math.PI / 6;
-              canvas.rotate(ang);
-              console.log(ang,'angolo');
-              canvas.translate(0, -radius * 0.85);
-              canvas.rotate(-ang);
-              canvas.fillText(num.toString(), 0, 0);
-              canvas.rotate(ang);
-              canvas.translate(0, radius * 0.85);
-              canvas.rotate(-ang);
-            }
-        }
-
-        let canvas = document.getElementById('canvas');
-        let ctx = canvas.getContext('2d');
-        let coordinate = canvas.height/2;
-        let radius = canvas.height/2*0.9
-        ctx.translate(coordinate, coordinate);
-        drawFullCircle(radius, ctx, 'white');
-        makebackgrounGradient(radius, ctx);
-        makeCenter(radius*0.1, ctx, '#333');
-        setNumbers(radius, ctx)
-
-    </script>
-
   </body>
+  <script src="practice.js"></script>
 </html>
