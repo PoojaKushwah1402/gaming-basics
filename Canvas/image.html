@@ -14,6 +14,9 @@ style="border:1px solid #d3d3d3;">
 Your browser does not support the HTML5 canvas tag.
 </canvas>
 
+<canvas id="canvas1" style="border:2px solid #d3d3d3;"></canvas>
+
+
 <script>
 window.onload = function() {
     var canvas = document.getElementById("myCanvas");
@@ -21,6 +24,21 @@ window.onload = function() {
     var img = document.getElementById("scream");
    ctx.drawImage(img, 100, 100);
 };
+
+const canvas = document.getElementById('canvas1');
+const ctx = canvas.getContext('2d');
+
+// Moved square
+ctx.translate(100, 30);
+ctx.fillStyle = 'red';
+ctx.fillRect(0, 0, 80, 80);
+
+// Reset current transformation matrix to the identity matrix
+//ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+// Unmoved square
+ctx.fillStyle = 'gray';
+ctx.fillRect(30, 30, 80, 80);
 </script>
 
 </body>
@@ -32,4 +50,7 @@ window.onload = function() {
     you must use a script to actually draw the graphics.
     The getContext() method returns an object that provides methods and properties for drawing on the canvas.
     This reference will cover the properties and methods of the getContext("2d") object, which can be used to draw
-    text, lines, boxes, circles, and more - on the canvas. -->
+    text, lines, boxes, circles, and more - on the canvas. 
+	
+	The translate() method adds a translation transformation to the current matrix by moving the canvas and its 
+	origin x units horizontally and y units vertically on the grid.-->
