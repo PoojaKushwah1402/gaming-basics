@@ -22,23 +22,23 @@ window.onload = function() {
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
     var img = document.getElementById("scream");
-   ctx.drawImage(img, 100, 100);
+   ctx.drawImage(img, 150, 120);
 };
 
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 
 // Moved square
-ctx.translate(100, 30);
+ctx.translate(150, 50);
 ctx.fillStyle = 'red';
-ctx.fillRect(0, 0, 80, 80);
+ctx.fillRect(0, 0, 70, 80);
 
 // Reset current transformation matrix to the identity matrix
 //ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 // Unmoved square
 ctx.fillStyle = 'gray';
-ctx.fillRect(30, 30, 80, 80);
+ctx.fillRect(30, 30, 70, 80);
 </script>
 
 </body>
